@@ -1,0 +1,104 @@
+ * Copyright (C) 2007-2024 Sensory Inc., All Rights Reserved
+ *
+ * ******* SENSORY CONFIDENTIAL *************
+ 
+TrulyHandsFree-Micro™ (THF-Micro™) Release Notes
+Version: 8.3.2
+
+The following files are included:
+- data: Sample acoustic models and audio files.
+  - data/model/VoiceHub/ contains VoiceHub models.
+  - data/model/Handtuned/ contains hand-tuned models.
+  - data/wav/ conains phrase utterances, used for input to THF-Micro™.
+  - The included .c files can be used to put models in code (rather than reading from .bin).
+  - Supported target formats for models: pc38w, pc40w, pc60w, and pc62w (pass one of these to spot-convert).
+  - pc38 and pc40 will not work with multiple channels or depth (C > 1 or D > 1).
+
+- demo: Demonstrate THF-Micro™ API usage for simple wake-word recognition use-case. 
+  - Includes emulation project using IAR Embedded Workbench for ARM.
+  - demo/SensoryDemo.c implements a simple speech recognizer using file-based audio input.
+  - demo/SensoryDemoMulti.c implements a multi-channel speech recognizer using file-based audio input.
+  - demo/SensoryDemoHelper.h contains declarations for demo helper functions.
+  - demo/SensoryDemoHelper.c contains definitions for demo helper functions.
+
+- docs: THF-Micro™ development guide, see docs/index.html.
+  - Starting from version 8.0.0, THF-Micro™ has a new API. See docs/THF-Micro_v8_Changes.pdf.
+
+- include: Required header files to build a THF-Micro™ application.
+  - include/sensorylib.h
+  - include/sensorytypes.h
+
+- lib: Pre-built THF-Micro™ libraries optimized for Arm Cortex-M33.
+  - lib/gcc-arm-none-eabi-10.3-2021.10/libTHFMicro_v8.3.2.a
+  - lib/iar-ewarm-9.20.2/libTHFMicro_v8.3.2.a
+
+Version 8.3.2
+Fix WWPQ and Stage3 buffering.Fix WWPQ and Stage3 buffering.
+
+Version 8.3.1
+Fix issue with no audio buffer and depth > 1.
+
+Version 8.3.0
+Fix rare issue with possibly correct recognitions getting discarded.
+
+Version 8.2.2
+Fix issue with multiple recognitions and depth >= 2.
+
+Version 8.2.0
+- Improve memory usage for SPP (10-20% space benefit).
+- May also improve processing time, depending on caching.
+- Remove need for SensoryProcessRestart after recognition.
+- Enable Speaker Verification (SV) with multiple channels/depth.
+
+Version 8.1.0
+- Remove redundant appStruct_T. Moved the 2 remaining members into t2siStruct.
+- Functions that used to take appStruct_T* now take t2siStruct* instead.
+- LPSD is now permitted with multiple frames.
+- Fix issue in reporting endpoints with depth > 1.
+- Fix issue where very-high-scoring recos could be off.
+
+Version 8.0.0
+- Can process multiple channels and/or multiple frames in the same channel - in one call. 
+- See SensoryAllocMulti, SensoryProcessMultiData, SensoryGetResult.
+- This saves on memory load time for relatively slow model memory.
+- SV cannot be used in multi-processing mode.
+- LPSD functions are hidden now, since user does not need to call them.
+- Audio functions are hidden now (no more appAudio.c) since user does not need to call them.
+- Audio is now handled internally but user can still assign an audio buffer if desired.
+- No need to call SensoryFindEndpoint and SensoryFindStartpoint now.
+- Most results formerly in t2siStruct are now in RecoResult structure.
+
+Version 7.4.2:
+Fix WWPQ and Stage3 buffering.
+
+Version 7.4.1:
+"Stage 3" support for additional accuracy with some models.
+
+Version 7.4:
+Add licensing info for THF-Micro™ library and model.
+
+Version 7.3.1:
+Report recognition status (pending, success, failed etc.). This enables arbitration between multiple recognizers.
+
+Version 7.2.0:
+- Wake-To-Command handling improved.
+- Now SensoryProcessFeatures can be used in the case of multiple compatible recognizers,
+  to speed up processing by using already-created features.
+
+Version 7.1.0:
+A phrase inside another phrase is now permitted (e.g. "wake up" and "wake up now").
+
+Version 7.0.0:
+- Now no special handling is needed for post-process rejection (so called "NNPQ").
+- Models with wider context can now be used.
+
+*** IMPORTANT ***
+Licensing and Usage Limits: 
+- The included libraries enforce event/usage limits and are intended for development purposes only. 
+- The SDK returns error code ERR_LICENSE (0xFF) when a limit is reached. 
+- Restarting the device will reset the event limits. 
+- Event limits include:
+    a) Duration limit: 11.43 hours
+    b) Number of Recognitions limit: 107
+
+Contact Sensory Sales (sales@sensory.com) for production licenses or any questions.

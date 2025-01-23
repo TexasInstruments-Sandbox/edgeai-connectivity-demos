@@ -1,0 +1,108 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --board "/ti/boards/LP_EM_CC2745R10_Q1" --device "CC2745R10RHAQ1" --part "Default" --package "RHA" --rtos "freertos" --product "simplelink_lowpower_f3_sdk@8.40.00.61"
+ * @v2CliArgs --board "/ti/boards/LP_EM_CC2745R10_Q1" --device "CC2745R10-Q1" --package "VQFN (RHA)" --rtos "freertos" --product "simplelink_lowpower_f3_sdk@8.40.00.61"
+ * @versions {"tool":"1.22.0+3893"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const FreeRTOS = scripting.addModule("/freertos/FreeRTOS");
+const Display  = scripting.addModule("/ti/display/Display");
+const Display1 = Display.addInstance();
+const GPIO     = scripting.addModule("/ti/drivers/GPIO", {}, false);
+const GPIO1    = GPIO.addInstance();
+const GPIO2    = GPIO.addInstance();
+const GPIO3    = GPIO.addInstance();
+const GPIO4    = GPIO.addInstance();
+const GPIO5    = GPIO.addInstance();
+const I2S      = scripting.addModule("/ti/drivers/I2S", {}, false);
+const I2S1     = I2S.addInstance();
+const PWM      = scripting.addModule("/ti/drivers/PWM", {}, false);
+const PWM1     = PWM.addInstance();
+const PWM2     = PWM.addInstance();
+const Power    = scripting.addModule("/ti/drivers/Power");
+const Settings = scripting.addModule("/ti/posix/freertos/Settings");
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+Display1.$hardware  = system.deviceData.board.components.XDS110UART;
+Display1.enableANSI = true;
+Display1.$name      = "CONFIG_Display_UART";
+Display1.uart.$name = "CONFIG_UART2_0";
+
+GPIO1.$name     = "CONFIG_GPIO_LED_GREEN";
+GPIO1.$hardware = system.deviceData.board.components.LED_GREEN;
+
+GPIO2.$name     = "CONFIG_GPIO_LED_RED";
+GPIO2.$hardware = system.deviceData.board.components.LED_RED;
+
+GPIO3.pull             = "Pull Up";
+GPIO3.interruptTrigger = "Falling Edge";
+GPIO3.$name            = "CONFIG_GPIO_DOOR_SW_LEFT";
+GPIO3.gpioPin.$assign  = "boosterpack.14";
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to LaunchPad SPI Bus on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", GPIO3, "gpioPin");
+
+GPIO4.$name            = "CONFIG_GPIO_DOOR_SW_RIGHT";
+GPIO4.pull             = "Pull Up";
+GPIO4.interruptTrigger = "Falling Edge";
+GPIO4.gpioPin.$assign  = "boosterpack.15";
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to LaunchPad SPI Bus on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", GPIO4, "gpioPin");
+
+GPIO5.$name           = "CONFIG_GPIO_DRV_nSLEEP";
+GPIO5.mode            = "Output";
+GPIO5.outputStrength  = "Low";
+GPIO5.gpioPin.$assign = "boosterpack.18";
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to LaunchPad SPI Bus Chip Select on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", GPIO5, "gpioPin");
+
+I2S1.$name              = "CONFIG_I2S_0";
+I2S1.sd1DataDirection   = "Disabled";
+I2S1.afclkSrc           = "I2SLPF3_AFCLK_SRC_CLKAF";
+I2S1.sd0DataDirection   = "Input";
+I2S1.interruptPriority  = "4";
+I2S1.i2s.SD0Pin.$assign = "boosterpack.38";
+I2S1.i2s.SCKPin.$assign = "boosterpack.32";
+I2S1.i2s.WSPin.$assign  = "boosterpack.31";
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to MX25R8035F SPI Flash Chip Select on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", I2S1.i2s, "SD0Pin");
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to LaunchPad CAN Bus on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", I2S1.i2s, "SCKPin");
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to LaunchPad CAN Bus on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", I2S1.i2s, "WSPin");
+
+PWM1.$name                            = "CONFIG_PWM_IN1";
+PWM1.prescalerDivider                 = 3;
+PWM1.timerObject.$name                = "CONFIG_LGPTIMER_0";
+PWM1.timerObject.channel0Connection   = "Pin";
+PWM1.timerObject.timer.ch0Pin.$assign = "boosterpack.7";
+scripting.suppress("Connected to hardware,@@@.+?@@@ is connected to LaunchPad SPI Bus on the CC2745R10-Q1 Development Platform\\. Consider selecting it in \'use hardware\' above\\. @@@.+?@@@", PWM1.timerObject.timer, "ch0Pin");
+
+PWM2.$name                            = "CONFIG_PWM_IN2";
+PWM2.prescalerDivider                 = 3;
+PWM2.timerObject.$name                = "CONFIG_LGPTIMER_1";
+PWM2.timerObject.channel0Connection   = "Pin";
+PWM2.timerObject.timer.ch0Pin.$assign = "boosterpack.39";
+
+const CCFG              = scripting.addModule("/ti/devices/CCFG", {}, false);
+CCFG.ccfgTemplate.$name = "ti_devices_CCFG_CCFGCC27XXTemplate0";
+
+/**
+ * References between modules
+ */
+CCFG.defaultLfoscCompProfile = null;
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+Display1.uart.uart.$suggestSolution              = "UART0";
+Display1.uart.uart.dmaTxChannel.$suggestSolution = "DMA_CH2";
+Display1.uart.uart.dmaRxChannel.$suggestSolution = "DMA_CH3";
+Display1.uart.uart.txPin.$suggestSolution        = "boosterpack.4";
+Display1.uart.uart.rxPin.$suggestSolution        = "boosterpack.3";
+GPIO1.gpioPin.$suggestSolution                   = "boosterpack.19";
+GPIO2.gpioPin.$suggestSolution                   = "boosterpack.36";
+I2S1.i2s.$suggestSolution                        = "I2S0";
+PWM1.timerObject.timer.$suggestSolution          = "LGPT2";
+PWM2.timerObject.timer.$suggestSolution          = "LGPT3";
