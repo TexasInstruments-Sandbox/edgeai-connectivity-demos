@@ -26,6 +26,8 @@ This example requires the following hardware
 ## Getting Started
 
 - Download [Code Composer Studio 12.8.1.0](https://www.ti.com/tool/download/CCSTUDIO/12.8.1)
+- Download gcc_arm_none_eabi_9_2_1 compiler or newer and install in c:\ti folder
+- Refresh the Compiler list within CCS - Window - Preferences - Code Composer Studio - Build - Compilers
 - Get [simplelink_lowpower_f3_sdk_8.40.00.61](https://www.ti.com/tool/download/SIMPLELINK-LOWPOWER-F3-SDK) SDK from Texas Instruments
 - Clone the [edgeai-connectivity-demo](https://github.com/TexasInstruments-Sandbox/edgeai-connectivity-demos) project GIT repository
 - Go to sensory_demo_cc27xx project folder
