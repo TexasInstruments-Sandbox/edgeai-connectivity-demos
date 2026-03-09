@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        <cconfiguration id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.1529947456">
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.1529947456" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+                <externalSettings/>
+                <extensions>
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+                </extensions>
+            </storageModule>
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                <configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.1529947456" name="Debug" parent="com.ti.ccstudio.buildDefinitions.TMS470.Debug">
+                    <folderInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Debug.1529947456." name="/" resourcePath="">
+                        <toolChain id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.DebugToolchain.1371895100" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.linkerDebug.745084864">
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1893601444" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+                                <listOptionValue value="DEVICE_CONFIGURATION_ID=Cortex M.CC35X1E"/>
+                                <listOptionValue value="DEVICE_CORE_ID="/>
+                                <listOptionValue value="DEVICE_ENDIANNESS=little"/>
+                                <listOptionValue value="OUTPUT_FORMAT=ELF"/>
+                                <listOptionValue value="RUNTIME_SUPPORT_LIBRARY="/>
+                                <listOptionValue value="CCS_MBS_VERSION=70.0.0"/>
+                                <listOptionValue value="PRODUCTS=com.ti.SIMPLELINK_WIFI_SDK:9.21.0.15;com.ti.SIMPLELINK_WIFI_TOOLBOX:4.0.13;sysconfig:1.26.0;"/>
+                                <listOptionValue value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.SIMPLELINK_WIFI_SDK&quot;:[&quot;${COM_TI_SIMPLELINK_WIFI_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_SDK_LIBRARIES}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_SDK_SYMBOLS}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_SDK_SYSCONFIG_MANIFEST}&quot;],&quot;com.ti.SIMPLELINK_WIFI_TOOLBOX&quot;:[&quot;${COM_TI_SIMPLELINK_WIFI_TOOLBOX_INCLUDE_PATH}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_TOOLBOX_LIBRARY_PATH}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_TOOLBOX_LIBRARIES}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_TOOLBOX_SYMBOLS}&quot;,&quot;${COM_TI_SIMPLELINK_WIFI_TOOLBOX_SYSCONFIG_MANIFEST}&quot;],&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;]}"/>
+                                <listOptionValue value="OUTPUT_TYPE=executable"/>
+                            </option>
+                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1835049011" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="GNU_15.2.1:Free Software Foundation" valueType="string"/>
+                            <targetPlatform id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.targetPlatformDebug.265661382" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.targetPlatformDebug"/>
+                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.builderDebug.1173687013" keepEnvironmentInBuildfile="false" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.builderDebug"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.compilerDebug.353727929" name="GNU Compiler" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.compilerDebug">
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.MCPU.1676022639" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.MCPU" value="cortex-m33" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.CODE_STATE.1323159186" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.CODE_STATE" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.CODE_STATE.THUMB" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.MFLOAT_ABI.249227894" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.MFLOAT_ABI" value="hard" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.MFPU.2097587288" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.MFPU" value="fpv5-sp-d16" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STD_C.1021173417" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STD_C" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STD_C.C99" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STD_CPP.1443844337" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STD_CPP" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STD_CPP.CPP11" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DEFINE.2136099261" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DEFINE" valueType="definedSymbols">
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_SYMBOLS}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_TOOLBOX_SYMBOLS}"/>
+                                    <listOptionValue value="${SYSCONFIG_TOOL_SYMBOLS}"/>
+                                    <listOptionValue value="CC35XX"/>
+                                    <listOptionValue value="RAM_CONTAINER"/>
+                                    <listOptionValue value="SNTP_SUPPORT"/>
+                                    <listOptionValue value="NVOCMP_POSIX_MUTEX"/>
+                                    <listOptionValue value="_REENT_SMALL"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.INCLUDE_PATH.2093052518" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.INCLUDE_PATH" valueType="includePath">
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_TOOLBOX_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/${ConfigName}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/kernel/freertos"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/posix/gcc"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/third_party/freertos/include"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/third_party/freertos/portable/GCC/ARM_CM33_NTZ/non_secure"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/drivers/net/wifi/wifi_platform/cc35xx/inc_common"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/net/wifi_stack/inc_common"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/drivers/net/wifi/wifi_host_driver/inc_common"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/drivers/net/wifi/wifi_host_driver/inc_adapt"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/tools/TI_Containers"/>
+                                    <listOptionValue value="${CG_TOOL_ROOT}/arm-none-eabi/include/newlib-nano"/>
+                                    <listOptionValue value="${CG_TOOL_ROOT}/arm-none-eabi/include"/>
+                                    <listOptionValue value="${CG_TOOL_INCLUDE_PATH}"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/THF-Micro_v8.3.2_SDK_Arm_CM33_hf/sensory"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/THF-Micro_v8.3.2_SDK_Arm_CM33_hf/data/model/VoiceHub"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/THF-Micro_v8.3.2_SDK_Arm_CM33_hf/demo"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.OPT_LEVEL.1341928059" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.FUNCTION_SECTIONS.1268801777" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.FUNCTION_SECTIONS" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DATA_SECTIONS.33044578" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DATA_SECTIONS" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DEBUG.145684310" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DEBUG" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DWARF_VERSION.550858651" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DWARF_VERSION" value="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.DWARF_VERSION.3" valueType="enumerated"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STRICT_DWARF.1718135524" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.STRICT_DWARF" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.OTHER_FLAGS.1546225558" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.OTHER_FLAGS" valueType="stringList">
+                                    <listOptionValue value=""/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.ASM_SPECIFIC_FLAGS.1442763774" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.compilerID.ASM_SPECIFIC_FLAGS" valueType="stringList">
+                                    <listOptionValue value="[asm: -xassembler-with-cpp]"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.linkerDebug.745084864" name="GNU Linker" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.exe.linkerDebug">
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.OUTPUT_FILE.555439031" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.OUTPUT_FILE" value="${ProjName}.out" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.MAP_FILE.1938083891" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.MAP_FILE" value="${ProjName}.map" valueType="string"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.NOSTARTFILES.1743941240" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.NOSTARTFILES" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.STATIC.154109940" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.STATIC" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.GC_SECTIONS.1296496369" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.GC_SECTIONS" value="true" valueType="boolean"/>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.LIBRARY.680835235" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.LIBRARY" valueType="libs">
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_LIBRARIES}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_TOOLBOX_LIBRARIES}"/>
+                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARIES}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/net/wifi_stack/lib/gcc/wifi_stack.a"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/third_party/hostap/lib/gcc/hostap.a"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/drivers/net/wifi/wifi_host_driver/lib/gcc/wifi_host_driver.a"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/drivers/net/wifi/wifi_platform/cc35xx/lib/gcc/wifi_platform_cc35xx.a"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source/ti/utils/FWU/lib/gcc/FWU.a"/>
+                                    <listOptionValue value="ti_utils_build_linker.cmd.genlibs"/>
+                                    <listOptionValue value="gcc"/>
+                                    <listOptionValue value="m"/>
+                                    <listOptionValue value="c"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.SEARCH_PATH.510053119" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.SEARCH_PATH" valueType="libPaths">
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_TOOLBOX_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/source"/>
+                                    <listOptionValue value="${PROJECT_BUILD_DIR}/syscfg"/>
+                                    <listOptionValue value="${PROJECT_ROOT}/THF-Micro_v8.3.2_SDK_Arm_CM33_hf/lib"/>
+                                </option>
+                                <option id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.OTHER_FLAGS.645695307" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.linkerID.OTHER_FLAGS" valueType="stringList">
+                                    <listOptionValue value="-mcpu=cortex-m33"/>
+                                    <listOptionValue value="-fno-lto"/>
+                                    <listOptionValue value="-mthumb"/>
+                                    <listOptionValue value="-mfloat-abi=hard"/>
+                                    <listOptionValue value="-mfpu=fpv5-sp-d16"/>
+                                    <listOptionValue value="--specs=nano.specs"/>
+                                </option>
+                            </tool>
+                            <tool id="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.hex.1810720028" name="GNU Objcopy Utility" superClass="com.ti.ccstudio.buildDefinitions.TMS470_GNU_15.0.hex"/>
+                            <tool id="com.ti.ccstudio.buildDefinitions.sysConfig.614218683" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
+                                <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.224081044" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_SYSCONFIG_MANIFEST}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_TOOLBOX_SYSCONFIG_MANIFEST}"/>
+                                    <listOptionValue value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_SDK_INSTALL_DIR}/.metadata/product.json"/>
+                                    <listOptionValue value="${COM_TI_SIMPLELINK_WIFI_TOOLBOX_INSTALL_DIR}/.metadata/product.json"/>
+                                </option>
+                            </tool>
+                        </toolChain>
+                    </folderInfo>
+                    <sourceEntries>
+                        <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                    </sourceEntries>
+                </configuration>
+            </storageModule>
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+        </cconfiguration>
+    </storageModule>
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        <project id="network_terminal_LP_EM_CC35X1_freertos_gcc.com.ti.ccstudio.buildDefinitions.TMS470.ProjectType.836137329" name="TMS470" projectType="com.ti.ccstudio.buildDefinitions.TMS470.ProjectType"/>
+    </storageModule>
+</cproject>

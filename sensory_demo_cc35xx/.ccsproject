@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="50:Theia-based"/>
+	<ccsVersion value="70.4.0"/>
+	<deviceFamily value="TMS470"/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
+	<executableActions value=""/>
+	<createSlaveProjects value=""/>
+	<ignoreDefaultDeviceSettings value="true"/>
+	<templateProperties value="id=network_terminal_LP_EM_CC35X1_freertos_gcc.projectspec.network_terminal_LP_EM_CC35X1_freertos_gcc,launch.loadSymbolsOnly=true,buildProfile=release,isHybrid=true"/>
+	<activeTargetConfiguration value="targetConfigs/CC35X1E.ccxml"/>
+	<isTargetConfigurationManual value="false"/>
+	<origin value="C:\ti\simplelink_wifi_sdk_9_21_00_15\examples\rtos\LP_EM_CC35X1\demos\network_terminal\freertos\gcc\network_terminal_LP_EM_CC35X1_freertos_gcc.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>
